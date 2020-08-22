@@ -21,7 +21,7 @@ const Banner = () => {
   }, []);
 
   console.log(movies);
-
+//hides all the words.... after n number of words
   function trancate(str,n){
     return str?.length > n ? str.substr(0, n-1) + "..." : str;
   }

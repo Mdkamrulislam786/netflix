@@ -3,6 +3,7 @@ import './App.css';
 //COMPONENTS
 import Row from './Components/Row'
 import Banner from './Components/Banner/Banner'
+import Navbar from './Components/Navbar/Navbar'
 
 //contents
 import requests from './request'
@@ -10,6 +11,7 @@ import requests from './request'
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <Banner/>
       <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow/>
       <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
