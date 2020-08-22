@@ -27,7 +27,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     },
   };
 
-  const handleClick = (movie) => {
+const handleClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
@@ -37,8 +37,9 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
          setTrailerUrl(urlParams.get('v')) 
         })
         .catch((error) => {
-          console.log(error);
+          alert(`${error}`);
         });
+       
     }
   };
 
