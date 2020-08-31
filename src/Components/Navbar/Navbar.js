@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import netflixLogo from '../../logo/netflix.png'
 
 const Navbar = () => {
   const [show, handleShow] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
     <div className={` nav ${show && "nav_black"}`}>
       <Link to="/">
         <img
-          src="https://lh3.googleusercontent.com/proxy/VY8H4FhWVtRpURtCwkM-mH1OkVeCLVu6HOHRoYJ8qzCE1u4qekU2HjzaZii16ktU13NdLRppfXg4J1-12P4lKZ0lB1v3gPLlqpOklyUBQ44iTzKSYOg"
+          src={netflixLogo}
           className="nav_logo"
           alt="Netflix"
         />

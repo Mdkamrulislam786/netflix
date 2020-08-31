@@ -15,8 +15,8 @@
 .nav_logo {
     position: fixed;
     left: 20px;
-    top:-10px;
-    height: 80px;
+    height: 35px;
+    padding-bottom: 5px;
     object-fit: contain;
 }
 
@@ -26,6 +26,9 @@
     height: 30px;
     object-fit: contain;
 }
-.nav_black{
+
+.nav_black {
+    display: flex;
+    justify-content: space-between;
     background-color: #111;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import Youtube from "react-youtube";
-import movieTrailer from 'movie-trailer'
+import movieTrailer from "movie-trailer";
 import "./Row.css";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
@@ -27,19 +27,18 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     },
   };
 
-const handleClick = (movie) => {
+  const handleClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
       movieTrailer(movie?.name || "")
         .then((url) => {
           const urlParams = new URLSearchParams(new URL(url).search);
-         setTrailerUrl(urlParams.get('v')) 
+          setTrailerUrl(urlParams.get("v"));
         })
         .catch((error) => {
           alert(`${error}`);
         });
-       
     }
   };
 
@@ -47,8 +46,10 @@ const handleClick = (movie) => {
     <div className="row">
       {/* title */}
       <h2>{title}</h2>
+
       <div className="row-posters">
         {/*  several row posters */}
+
         {movies.map((movie) => {
           return (
             <img

@@ -23,7 +23,6 @@ const Banner = () => {
     fetchData();
   }, []);
 
-  console.log(movies);
 
   const handlePlay = (movie) => {
     if (trailerUrl) {
